@@ -80,3 +80,40 @@
         }
     }
 }
+
+/* Responsive adjustments for search bar layout (Tablet) */
+@include tablet {
+    .search-bar {
+        max-width: 35rem;
+        min-height: 3rem;
+        display: flex;
+        gap: 0;
+
+        &__input {
+            padding: $spacing-sm 14px 10px 22px;
+            font-size: clamp(0.938rem, 0.826rem + 0.231vw, 1rem);
+            line-height: 1.6;
+            letter-spacing: 0.06rem;
+
+            &::placeholder {
+                font-size: clamp(0.813rem, 0.701rem + 0.231vw, 0.875rem);
+                line-height: 1.6;
+                letter-spacing: 0.12rem;
+            }
+        }
+
+        &__button {
+            width: 10rem;
+            gap: $spacing-sm;
+            padding: $spacing-sm 6px $spacing-xs 14px;
+            font-size: clamp(0.813rem, 0.701rem + 0.231vw, 0.875rem);
+            line-height: 1.5;
+            letter-spacing: 0.06rem;
+
+            &-icon {
+                font-size: clamp(1.125rem, 0.458rem + 1.389vw, 1.5rem);
+            }
+        }
+    }
+
+}

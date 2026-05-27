@@ -49,3 +49,12 @@
         transform: translateY(0);
     }
 }
+
+/* Responsive adjustments for scroll indicator (Tablet) */
+@include tablet {
+    .scroll-indicator__text {
+        font-size: clamp(0.813rem, 0.701rem + 0.231vw, 0.875rem);
+        line-height: 1.6;
+        letter-spacing: 0.12rem;
+    }
+}
