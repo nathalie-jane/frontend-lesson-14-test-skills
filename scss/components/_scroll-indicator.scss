@@ -58,3 +58,16 @@
         letter-spacing: 0.12rem;
     }
 }
+
+/* Responsive adjustments for scroll indicator (Desktop) */
+@include desktop {
+    .scroll-indicator {
+        bottom: 10rem;
+
+        &__text {
+            font-size: 0.875rem;
+            line-height: 1.857;
+            letter-spacing: 0.175rem;
+        }
+    }
+}

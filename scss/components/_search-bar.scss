@@ -117,3 +117,50 @@
     }
 
 }
+
+/* Responsive adjustments for search bar layout (Desktop) */
+@include desktop {
+    .search-bar {
+        width: 100%;
+        max-width: 41rem;
+        min-height: 4rem;
+
+        &__input {
+            font-size: 1rem;
+            line-height: 1.5;
+            letter-spacing: 0.05rem;
+
+            &::placeholder {
+                font-size: 0.875rem;
+                line-height: 1.857;
+                letter-spacing: 0.175rem;
+            }
+        }
+
+        &__button {
+            width: 11rem;
+            font-size: 0.875rem;
+            line-height: 1.857;
+            letter-spacing: 0.088rem;
+            border-width: 2px;
+
+            transition:
+                background-color $transition-default,
+                border-color $transition-default,
+                box-shadow $transition-default,
+                filter $transition-default;
+
+            /* Hover effect for search button on desktop */
+            &:hover {
+                background-color: $color-brand-secondary;
+                border-color: $color-white;
+                box-shadow: 0 0 16px $color-shadow-light;
+                filter: brightness(1.08);
+            }
+
+            &-icon {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

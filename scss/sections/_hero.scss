@@ -76,3 +76,33 @@
         }
     }
 }
+
+/* Responsive adjustments for hero layout (Desktop) */
+@include desktop {
+    .hero {
+        padding-inline: 0;
+
+        &__inner {
+            @include section-container;
+            padding-inline: $spacing-xl;
+            grid-template-rows: 1fr auto auto auto 1.3fr;
+            gap: $spacing-3xl;
+        }
+
+        &__content {
+            gap: $spacing-sm;
+        }
+
+        &__heading {
+            font-size: 3rem;
+            line-height: 0.542;
+            letter-spacing: 0.3rem;
+        }
+
+        &__tagline {
+            font-size: 1.375rem;
+            line-height: 1.182;
+            letter-spacing: 0.426rem;
+        }
+    }
+}
