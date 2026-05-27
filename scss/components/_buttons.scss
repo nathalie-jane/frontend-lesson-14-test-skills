@@ -1,0 +1,23 @@
+/* =======================================
+    COMPONENT: BUTTONS
+
+    Shared CTA button styles for intro 
+    section and destination cards
+========================================== */
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* Base button styles */
+.intro__button {
+    width: 9.5rem;
+    min-height: 2.5rem;
+    padding: 14px $spacing-xs $spacing-sm $spacing-xs;
+    background: linear-gradient(42deg, $color-brand-secondary 38%, $color-brand-primary 38%);
+    border: none;
+    font-family: $font-secondary;
+    font-size: clamp(0.75rem, 0.705rem + 0.223vw, 0.813rem);
+    line-height: 1.4;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}

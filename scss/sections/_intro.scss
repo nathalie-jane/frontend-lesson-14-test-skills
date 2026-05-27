@@ -1,0 +1,56 @@
+/* =======================================
+    INTRO SECTION
+
+    layout and styling for intro section
+========================================== */
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* Intro section layout */
+.intro {
+    @include section-base;
+    background-image: url(../assets/images/intro-chateau.webp);
+    @include background-cover;
+
+    /* Inner container for intro content */
+    &__inner {
+        width: 100%;
+        display: grid;
+        justify-items: center;
+        gap: $spacing-2xl;
+        padding-block: $spacing-2xl;
+    }
+
+    /* Text block */
+    &__content {
+        width: 100%;
+        display: grid;
+        justify-items: center;
+        gap: $spacing-xl;
+    }
+
+    /* Intro heading */
+    &__heading {
+        color: $color-text-primary;
+        font-family: $font-secondary;
+        font-size: clamp(1.625rem, 1.446rem + 0.893vw, 1.875rem);
+        line-height: 1.2;
+        font-weight: $font-weight-normal;
+        text-transform: capitalize;
+    }
+
+    /* Intro paragraph text */
+    &__info {
+        color: $color-text-secondary;
+        font-size: clamp(0.875rem, 0.83rem + 0.223vw, 0.938rem);
+        line-height: 1.6;
+        letter-spacing: 0.03rem;
+    }
+}
+
+/* Wrapper for images */
+.intro-visual {
+    display: grid;
+    gap: $spacing-lg;
+}
