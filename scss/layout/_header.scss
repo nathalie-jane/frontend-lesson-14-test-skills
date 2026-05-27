@@ -1,0 +1,25 @@
+/* =======================================
+    HEADER SECTION
+
+    Layout and styling for header section
+========================================== */
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* Header bar layout */
+.site-header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    padding-block: $spacing-sm;
+    background-color: $color-brand-primary;
+
+    /* Inner container for header content */
+    &__inner {
+        @include section-base;
+        margin-inline: auto;
+    }
+}

@@ -1,0 +1,33 @@
+/* =======================================
+    COMPONENT: TOGGLE MENU
+
+    Styles for the responsive navigation 
+    toggle
+========================================== */
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* Toggle button base styles */
+.toggle-menu__button {
+    padding-bottom: 2px;
+    color: $color-text-primary;
+    background: transparent;
+    border: none;
+    font-size: clamp(1.125rem, 1.036rem + 0.446vw, 1.25rem);
+
+    /* Hide close button by default */
+    &--close {
+        display: none;
+    }
+}
+
+/* Hide open button when menu is active */
+.site-nav.menu .toggle-menu__button--open {
+    display: none;
+}
+
+/* Show close button when menu is active */
+.site-nav.menu .toggle-menu__button--close {
+    display: block;
+}

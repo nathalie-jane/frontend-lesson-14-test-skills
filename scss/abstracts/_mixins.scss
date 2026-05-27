@@ -1,0 +1,17 @@
+/* ================================
+    MIXINS
+
+    Reusable style patterns
+=================================== */
+
+@use "../abstracts/variables" as *;
+
+/* ---------------------------
+    LAYOUT
+------------------------------ */
+
+/* Full-width section with horizontal padding */
+@mixin section-base {
+    width: 100%;
+    padding-inline: $spacing-md;
+}
