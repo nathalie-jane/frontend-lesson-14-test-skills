@@ -107,3 +107,39 @@
         }
     }
 }
+
+/* Responsive adjustments for intro layout (Desktop) */
+@include desktop {
+    .intro {
+        min-height: 45rem;
+        padding-inline: 0;
+
+        /* 12-column grid layout for text and images */
+        &__inner {
+            @include section-container;
+            padding-inline: $spacing-xl;
+            grid-template-columns: repeat(12, 1fr);
+            column-gap: $spacing-xl;
+        }
+
+        &__content {
+            grid-column: 1 / span 6;
+        }
+
+        &__heading {
+            font-size: 2.25rem;
+            line-height: 0.722;
+        }
+
+        &__info {
+            font-size: 1rem;
+            line-height: 1.625;
+            letter-spacing: 0.1rem;
+            padding-right: 0;
+        }
+    }
+
+    .intro-visual {
+        grid-column: 8 / span 5;
+    }
+}
