@@ -54,3 +54,56 @@
     display: grid;
     gap: $spacing-lg;
 }
+
+/* Responsive adjustments for intro layout (Tablet) */
+@include tablet {
+    .intro {
+        min-height: 32rem;
+        display: grid;
+        align-items: center;
+        padding-inline: $spacing-xl;
+
+        /* 8-column grid layout for text and images */
+        &__inner {
+            grid-auto-flow: column;
+            grid-template-columns: repeat(8, 1fr);
+            gap: $spacing-md;
+        }
+
+        /* Text block placed on the left */
+        &__content {
+            grid-column: 1 / span 4;
+            justify-items: start;
+            gap: $spacing-lg;
+        }
+
+        &__heading {
+            align-self: end;
+            font-size: clamp(1.875rem, 1.208rem + 1.389vw, 2.25rem);
+            line-height: 1.15;
+        }
+
+        &__info {
+            padding-right: $spacing-xl;
+            font-size: clamp(0.938rem, 0.826rem + 0.231vw, 1rem);
+            line-height: 1.65;
+            letter-spacing: 0.05rem;
+        }
+    }
+
+    /* Image block placed on the right */
+    .intro-visual {
+        grid-column: 5 / span 4;
+        grid-template-columns: repeat(5, 1fr);
+        gap: $spacing-sm;
+        padding-left: $spacing-md;
+
+        &__image--mountains {
+            grid-column: 1 / span 4;
+        }
+
+        &__image--lakeside {
+            grid-column: 2 / span 4;
+        }
+    }
+}
