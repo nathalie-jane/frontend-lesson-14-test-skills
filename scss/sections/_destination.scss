@@ -55,3 +55,21 @@
         }
     }
 }
+
+/* Responsive adjustments for destination layout (Desktop) */
+@include desktop {
+    .destination {
+        min-height: 48rem;
+        padding-inline: 0;
+        grid-template-rows: repeat(3, 1fr);
+
+        /* 12-column grid layout for destination content */
+        &__inner {
+            @include section-container;
+            padding-inline: $spacing-xl;
+            grid-template-columns: repeat(12, 1fr);
+            column-gap: $spacing-xl;
+            grid-row: 2 / span 2;
+        }
+    }
+}

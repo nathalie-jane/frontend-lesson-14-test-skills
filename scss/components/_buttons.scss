@@ -37,3 +37,28 @@
         letter-spacing: 0.06rem;
     }
 }
+
+/* Responsive adjustments for buttons (Desktop) */
+@include desktop {
+
+    .intro__button,
+    .destination-card__button {
+        width: 13rem;
+        height: 3.5rem;
+        font-size: 1rem;
+        line-height: 1.625;
+        letter-spacing: 0.075rem;
+
+        transition: transform $transition-default,
+            box-shadow $transition-default,
+            filter $transition-default;
+    }
+
+    /* Hover effect for buttons on desktop */
+    .intro__button:hover,
+    .destination-card__button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px $color-shadow-dark;
+        filter: brightness(1.08);
+    }
+}
