@@ -1,0 +1,60 @@
+/* =====================================
+    MAIN STYLESHEET
+======================================== */
+
+/* -------------------------------
+    ABSTRACTS
+
+    Variables and reusable mixins
+---------------------------------- */
+
+@use "abstracts/mixins";
+@use "abstracts/variables";
+
+/* -------------------------------
+    BASE
+
+    Global styles, resets and 
+    typography
+---------------------------------- */
+
+@use "base/base";
+@use "base/reset";
+@use "base/typography";
+
+/* -------------------------------
+    LAYOUT
+
+    Styles for overall page layout
+    and structure
+---------------------------------- */
+
+@use "layout/footer";
+@use "layout/header";
+@use "layout/navigation";
+
+/* -------------------------------
+    COMPONENTS
+
+    Reusable UI components
+---------------------------------- */
+
+@use "components/buttons";
+@use "components/destination-card";
+@use "components/scroll-indicator";
+@use "components/search-bar";
+@use "components/testimonial-card";
+@use "components/toggle-menu";
+
+/* -------------------------------
+    SECTIONS
+
+    Styles for specific page 
+    sections
+---------------------------------- */
+
+@use "sections/booking";
+@use "sections/destination";
+@use "sections/hero";
+@use "sections/intro";
+@use "sections/testimonial";

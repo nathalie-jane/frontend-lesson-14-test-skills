@@ -1,0 +1,30 @@
+/* =======================================
+    TYPOGRAPHY
+
+    Base styles for headings, paragraphs,
+    and other text elements
+========================================== */
+
+@use "../abstracts/variables" as *;
+
+/* Base font family */
+body {
+    font-family: $font-primary;
+}
+
+/* Paragraph font weight */
+p {
+    font-weight: $font-weight-normal;
+}
+
+/* Link text styles */
+a {
+    color: $color-text-primary;
+    text-decoration: none;
+}
+
+/* Button text styles */
+button {
+    color: $color-text-primary;
+    font-weight: $font-weight-normal;
+}

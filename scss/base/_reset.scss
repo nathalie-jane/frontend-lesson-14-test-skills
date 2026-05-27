@@ -1,0 +1,55 @@
+/* =======================================
+    RESET
+
+    Basic reset styyles to ensure 
+    consistency across browsers
+========================================== */
+
+@use "../abstracts/variables" as *;
+
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base page background */
+body {
+    background-color: $color-page-overlay;
+}
+
+/* Make images responsive by default */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Remove default spacing */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default list bullets */
+ul {
+    list-style-type: none;
+}
+
+/* Show pointer cursor on clickable buttons */
+button {
+    cursor: pointer;
+}
