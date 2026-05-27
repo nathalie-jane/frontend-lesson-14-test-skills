@@ -48,3 +48,26 @@
         font-size: clamp(1.625rem, 1.536rem + 0.446vw, 1.75rem);
     }
 }
+
+/* Responsive adjustments for testimonial card layout (Tablet) */
+@include tablet {
+    .testimonial-card {
+        max-width: 23.75rem;
+        min-height: 36rem;
+        grid-column: 2 / span 6;
+
+        &__name {
+            font-size: clamp(1.125rem, 0.903rem + 0.463vw, 1.25rem);
+            line-height: 1.35;
+        }
+
+        &__info {
+            font-size: clamp(0.938rem, 0.826rem + 0.231vw, 1rem);
+            line-height: 1.65;
+        }
+
+        &__quote-icon {
+            font-size: clamp(1.75rem, 1.306rem + 0.926vw, 2rem);
+        }
+    }
+}

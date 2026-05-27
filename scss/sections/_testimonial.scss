@@ -33,3 +33,26 @@
         text-transform: capitalize;
     }
 }
+
+/* Responsive adjustments for testimonial layout (Tablet) */
+@include tablet {
+    .testimonial {
+        min-height: 32rem;
+        display: grid;
+        padding-inline: $spacing-xl;
+
+        /* 8-column grid layout for testimonial content */
+        &__inner {
+            grid-template-columns: repeat(8, 1fr);
+            column-gap: $spacing-md;
+            padding-block: $spacing-3xl;
+        }
+
+        /* Center testimonial heading across columns */
+        &__heading {
+            grid-column: 3 / span 4;
+            font-size: clamp(1.875rem, 1.208rem + 1.389vw, 2.25rem);
+            line-height: 1.15;
+        }
+    }
+}
