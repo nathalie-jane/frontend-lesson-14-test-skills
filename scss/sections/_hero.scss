@@ -1,0 +1,59 @@
+/* =======================================
+    HERO SECTION
+
+    layout and styling for hero section
+========================================== */
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* Hero section layout */
+.hero {
+    @include section-base;
+    position: relative;
+    min-height: 100vh;
+    background-image: url("../assets/images/hero-mountains.webp");
+    @include background-cover;
+
+    /* Inner container for hero content */
+    &__inner {
+        width: 100%;
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1.35fr auto auto auto 1fr;
+        gap: $spacing-lg;
+        justify-items: center;
+        align-content: center;
+    }
+
+    /* Hero text block */
+    &__content {
+        width: 100%;
+        display: grid;
+        padding-bottom: $spacing-sm;
+        grid-row: 2;
+        gap: $spacing-xxs;
+        text-align: center;
+    }
+
+    /* Brand logo heading */
+    &__heading {
+        margin-top: $spacing-md;
+        color: $color-text-primary;
+        font-size: clamp(2rem, 1.286rem + 3.571vw, 3rem);
+        line-height: 1.1;
+        letter-spacing: 0.15rem;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+    }
+
+    /* Brand tagline */
+    &__tagline {
+        color: $color-text-primary;
+        font-size: clamp(1rem, 0.911rem + 0.446vw, 1.125rem);
+        line-height: 1.4;
+        letter-spacing: 0.15rem;
+        font-weight: $font-weight-normal;
+        text-transform: capitalize;
+    }
+}
