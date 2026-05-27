@@ -1,0 +1,35 @@
+/* =======================================
+    TESTIMONIAL SECTION
+
+    layout and styling for testimonial 
+    section
+========================================== */
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* Testimonial section layout */
+.testimonial {
+    @include section-base;
+    background-image: url(../assets/images/testimonial-scenic.webp);
+    @include background-cover;
+
+    /* Inner container for testimonial content */
+    &__inner {
+        width: 100%;
+        display: grid;
+        justify-items: center;
+        gap: $spacing-2xl;
+        padding-block: $spacing-2xl;
+    }
+
+    /* Testimonial heading */
+    &__heading {
+        color: $color-text-primary;
+        font-family: $font-secondary;
+        font-size: clamp(1.625rem, 1.446rem + 0.893vw, 1.875rem);
+        line-height: 1.2;
+        font-weight: $font-weight-normal;
+        text-transform: capitalize;
+    }
+}

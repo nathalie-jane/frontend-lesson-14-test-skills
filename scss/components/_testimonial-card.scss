@@ -1,0 +1,50 @@
+/* =======================================
+    COMPONENT: TESTIMONIAL CARD
+
+    Testimonial section card styles
+========================================== */
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* Card container */
+.testimonial-card {
+    width: 100%;
+    max-width: 27.75rem;
+    min-height: 33.2rem;
+    display: grid;
+    justify-items: center;
+    background-color: $color-soft-black;
+    font-family: $font-primary;
+
+    /* Card content layout */
+    &__content {
+        width: 100%;
+        display: grid;
+        gap: $spacing-xs;
+        padding: $spacing-xl 20px;
+    }
+
+    /* Reviewer name */
+    &__name {
+        color: $color-text-tertiary;
+        font-size: clamp(0.938rem, 0.804rem + 0.668vw, 1.125rem);
+        line-height: 1.35;
+        font-weight: $font-weight-normal;
+        text-transform: uppercase;
+    }
+
+    /* Card description text */
+    &__info {
+        color: $color-text-secondary;
+        font-size: clamp(0.875rem, 0.83rem + 0.223vw, 0.938rem);
+        line-height: 1.6;
+    }
+
+    /* Quote icon */
+    &__quote-icon {
+        padding-right: $spacing-xs;
+        color: $color-brand-primary;
+        font-size: clamp(1.625rem, 1.536rem + 0.446vw, 1.75rem);
+    }
+}
