@@ -1,0 +1,66 @@
+/* =======================================
+    BOOKING SECTION
+
+    Layout and styling for booking section
+========================================== */
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* Booking section layout */
+.booking {
+    @include section-base;
+    background-color: $color-soft-black;
+
+    /* Inner container for booking content */
+    &__inner {
+        width: 100%;
+        display: grid;
+        padding-block: $spacing-2xl;
+    }
+
+    /* Booking process container */
+    &__process {
+        width: 100%;
+        display: grid;
+        gap: $spacing-xl;
+    }
+
+    /* Individual booking process item */
+    &__item {
+        display: grid;
+        justify-items: center;
+        gap: $spacing-md;
+    }
+
+    /* Booking step icon */
+    &__icon {
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+
+        /* "Search" icon */
+        &--magnifier {
+            color: $color-brand-primary;
+        }
+
+        /* "Select" icon */
+        &--checkmark {
+            color: $color-red;
+        }
+
+        /* "Book & enjoy" icon */
+        &--thumbs-up {
+            color: $color-blue;
+        }
+    }
+
+    /* Text label below each icon */
+    &__step {
+        color: $color-text-secondary;
+        font-family: $font-secondary;
+        font-size: 1.375rem;
+        line-height: 1.2;
+        text-transform: capitalize;
+    }
+}
