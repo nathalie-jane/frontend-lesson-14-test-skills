@@ -31,3 +31,27 @@
         padding-block: $spacing-2xl;
     }
 }
+
+/* Responsive adjustments for destination layout (Tablet) */
+@include tablet {
+    .destination {
+        min-height: 32rem;
+        display: grid;
+        align-items: center;
+        padding-inline: $spacing-xl;
+
+        /* 8-column grid layout for destination content */
+        &__inner {
+            grid-template-columns: repeat(8, 1fr);
+            gap: $spacing-md;
+
+            &--villa {
+                padding-left: $spacing-md;
+            }
+
+            &--coast {
+                padding-right: $spacing-md;
+            }
+        }
+    }
+}

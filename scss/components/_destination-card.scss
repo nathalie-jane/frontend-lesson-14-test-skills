@@ -48,5 +48,35 @@
         font-size: clamp(0.875rem, 0.83rem + 0.223vw, 0.938rem);
         line-height: 1.6;
     }
+}
 
+/* Responsive adjustments for destination card layout (Tablet) */
+@include tablet {
+    .destination-card {
+        padding: $spacing-xl;
+
+        &--villa {
+            grid-column: 1 / span 5;
+        }
+
+        &--coast {
+            grid-column: 4 / span 5;
+        }
+
+        &__location {
+            font-size: clamp(1rem, 0.556rem + 0.926vw, 1.25rem);
+            line-height: 1.4;
+            letter-spacing: 0.06rem;
+        }
+
+        &__heading {
+            font-size: clamp(1.125rem, 0.903rem + 0.463vw, 1.25rem);
+            line-height: 1.35;
+        }
+
+        &__info {
+            font-size: clamp(0.938rem, 0.826rem + 0.231vw, 1rem);
+            line-height: 1.65;
+        }
+    }
 }

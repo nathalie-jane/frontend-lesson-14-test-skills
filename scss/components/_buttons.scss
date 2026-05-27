@@ -22,3 +22,18 @@
     letter-spacing: 0.08rem;
     text-transform: uppercase;
 }
+
+/* Responsive adjustments for buttons (Tablet) */
+@include tablet {
+    .intro__button {
+        width: 10rem;
+        height: 3rem;
+    }
+
+    .intro__button,
+    .destination-card__button {
+        font-size: clamp(0.813rem, 0.701rem + 0.231vw, 0.875rem);
+        line-height: 1.5;
+        letter-spacing: 0.06rem;
+    }
+}
