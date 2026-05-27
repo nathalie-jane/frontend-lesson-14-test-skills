@@ -19,6 +19,11 @@
         padding-block: $spacing-2xl;
     }
 
+    /* Decorative arch shape (hidden on mobile) */
+    &__shape {
+        display: none;
+    }
+
     /* Booking process container */
     &__process {
         width: 100%;
@@ -62,5 +67,63 @@
         font-size: 1.375rem;
         line-height: 1.2;
         text-transform: capitalize;
+    }
+}
+
+/* Responsive adjustments for booking section layout (Tablet) */
+@include tablet {
+    .booking {
+        padding-inline: $spacing-xl;
+
+        &__inner {
+            position: relative;
+            justify-items: center;
+        }
+
+        /* Show decorative arch shape on tablet and larger screens */
+        &__shape {
+            display: block;
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            top: 0.75rem;
+            height: 3.75rem;
+            width: 42rem;
+            transform: translateX(-50%);
+            color: $color-arch-light;
+        }
+
+        /* Place booking steps in a row */
+        &__process {
+            width: 85%;
+            grid-auto-flow: column;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Add a circular background behind each step icon */
+        &__item {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                z-index: 1;
+                width: 3.75rem;
+                height: 3.75rem;
+                transform: translateX(-50%);
+                background-color: $color-soft-black;
+                border-radius: 50%;
+            }
+        }
+
+        /* Keep icons and step labels above the circular backgrounds */
+        &__icon,
+        &__step {
+            position: relative;
+            z-index: 2;
+        }
     }
 }

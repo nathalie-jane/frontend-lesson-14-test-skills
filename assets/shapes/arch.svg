@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 50">
+    <symbol id="shape-arch" viewBox="0 0 410 50">
+        <path
+          d="M 36,45 C 87,-0 141,-17 203,45"
+          stroke-width="1"
+          stroke="currentColor"
+          fill="none"
+          />
+          
+
+        <path
+          d="M 204,45 C 254,-4 307,-14 367,45"
+          stroke-width="1"
+          stroke="currentColor"
+          fill="none"
+          />
+    </symbol>
+</svg>
