@@ -100,3 +100,53 @@
         line-height: 1.6;
     }
 }
+
+/* Responsive adjustments for navigation layout (Desktop) */
+@include desktop {
+
+    /* Brand logo styling */
+    .site-nav__logo {
+        align-self: center;
+        padding-top: 6px;
+        font-size: 1.5rem;
+        line-height: 1.75;
+        letter-spacing: 0.15rem;
+
+        transition:
+            transform $transition-default,
+            opacity $transition-default;
+
+        /* Brand logo hover effect */
+        &:hover {
+            transform: scale(1.1);
+            opacity: 0.85;
+        }
+    }
+
+    /* Show navigation list items in desktop view */
+    .site-nav__list {
+        display: flex;
+        flex-grow: 0.2;
+    }
+
+    /* Navigation link styling */
+    .site-nav__link {
+        min-height: 2.2rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.875rem;
+        line-height: 1.857;
+
+        transform-origin: center;
+        transition:
+            transform $transition-default,
+            opacity $transition-default;
+
+        /* Navigation link hover effect */
+        &:hover {
+            transform: scale(1.1);
+            opacity: 0.85;
+        }
+    }
+}

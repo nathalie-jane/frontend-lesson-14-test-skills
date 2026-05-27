@@ -38,3 +38,12 @@
         font-size: 1.25rem;
     }
 }
+
+/* Responsive adjustments for toggle menu (Desktop) */
+@include desktop {
+
+    /* Hide toggle button on desktop */
+    .toggle-menu__button {
+        display: none;
+    }
+}

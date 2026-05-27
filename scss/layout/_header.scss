@@ -34,3 +34,20 @@
         }
     }
 }
+
+/* Responsive adjustments for header layout (Desktop) */
+@include desktop {
+    .site-header {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: calc(100vh - 4rem);
+        min-height: 4rem;
+        height: 4rem;
+        padding-block: $spacing-xs;
+
+        &__inner {
+            @include section-container;
+        }
+    }
+}

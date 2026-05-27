@@ -34,6 +34,13 @@
     padding-inline: $spacing-md;
 }
 
+/* Centered desktop container with max-width */
+@mixin section-container {
+    max-width: $container-max-width;
+    width: 100%;
+    margin-inline: auto;
+}
+
 /* ---------------------------
     BACKGROUND
 ------------------------------ */
