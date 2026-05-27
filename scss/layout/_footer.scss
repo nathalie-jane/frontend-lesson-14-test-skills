@@ -63,3 +63,30 @@
         }
     }
 }
+
+/* Responsive adjustments for footer layout (Tablet) */
+@include tablet {
+    .site-footer {
+        padding-inline: $spacing-xl;
+
+        &__inner {
+            padding-top: $spacing-2xl;
+        }
+
+        &__heading {
+            font-size: clamp(1.25rem, 0.806rem + 0.926vw, 1.5rem);
+            line-height: 1.15;
+            letter-spacing: 0.15rem;
+        }
+
+        &__tagline {
+            font-size: clamp(0.938rem, 0.826rem + 0.231vw, 1rem);
+            line-height: 1.55;
+            letter-spacing: 0.05rem;
+        }
+
+        &__social {
+            font-size: clamp(0.938rem, 0.826rem + 0.231vw, 1rem);
+        }
+    }
+}
