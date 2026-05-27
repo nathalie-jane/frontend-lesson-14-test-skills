@@ -53,7 +53,7 @@
         text-transform: uppercase;
     }
 
-    /* Mobile menu overlay */
+    /* Overlay menu (mobile and tablet) */
     &.menu .site-nav__list {
         display: flex;
         flex-direction: column;
@@ -69,7 +69,7 @@
         backdrop-filter: blur(10px);
     }
 
-    /* Mobile link item feedback */
+    /* Link item feedback (mobile and tablet) */
     &.menu .site-nav__item {
         transition:
             transform $transition-default,
@@ -77,10 +77,26 @@
             background-color $transition-default;
     }
 
-    /* Mobile link item active state */
+    /* Link item active state (mobile and tablet) */
     &.menu .site-nav__item:active {
         transform: scale(1.05);
         opacity: 0.9;
         background-color: $color-menu-feedback;
+    }
+}
+
+/* Responsive adjustments for navigation layout (Tablet) */
+@include tablet {
+    .site-nav__logo {
+        font-size: clamp(1.25rem, 0.806rem + 0.926vw, 1.5rem);
+        line-height: 1.15;
+        letter-spacing: 0.12rem;
+    }
+
+    .site-nav__link {
+        min-height: 3.25rem;
+        padding-inline: $spacing-xs;
+        font-size: clamp(1rem, 1.222rem + -0.463vw, 0.875rem);
+        line-height: 1.6;
     }
 }

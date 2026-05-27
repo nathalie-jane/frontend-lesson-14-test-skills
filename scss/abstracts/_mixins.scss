@@ -7,6 +7,24 @@
 @use "../abstracts/variables" as *;
 
 /* ---------------------------
+    MEDIA QUERIES
+------------------------------ */
+
+/* Tablet breakpoint */
+@mixin tablet {
+    @media screen and (min-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+/* Desktop breakpoint */
+@mixin desktop {
+    @media screen and (min-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+/* ---------------------------
     LAYOUT
 ------------------------------ */
 

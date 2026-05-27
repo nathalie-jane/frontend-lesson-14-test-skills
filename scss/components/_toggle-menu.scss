@@ -31,3 +31,10 @@
 .site-nav.menu .toggle-menu__button--close {
     display: block;
 }
+
+/* Responsive adjustments for toggle menu (Tablet) */
+@include tablet {
+    .toggle-menu__button {
+        font-size: 1.25rem;
+    }
+}
