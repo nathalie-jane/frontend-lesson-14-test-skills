@@ -1,0 +1,65 @@
+/* =======================================
+    FOOTER SECTION
+
+    Layout and styling for footer section
+========================================== */
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* Footer layout */
+.site-footer {
+    @include section-base;
+    background-color: $color-charcoal;
+
+    /* Inner container for footer content */
+    &__inner {
+        width: 100%;
+        display: grid;
+        gap: $spacing-sm;
+        padding-block: $spacing-xl $spacing-md;
+    }
+
+    /* Footer text block */
+    &__content {
+        width: 100%;
+        display: grid;
+        gap: $spacing-xxs;
+        color: $color-text-primary;
+        font-family: $font-primary;
+        text-align: center;
+    }
+
+    /* Brand logo heading */
+    &__heading {
+        font-size: clamp(1rem, 0.821rem + 0.893vw, 1.25rem);
+        line-height: 1.2;
+        letter-spacing: 0.1rem;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+    }
+
+    /* Brand tagline */
+    &__tagline {
+        font-size: clamp(0.875rem, 0.83rem + 0.223vw, 0.938rem);
+        line-height: 1.5;
+        letter-spacing: 0.03rem;
+        font-weight: $font-weight-normal;
+        text-transform: capitalize;
+    }
+
+    /* Social media icon list */
+    &__social {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: $spacing-md;
+        color: $color-text-secondary;
+        font-size: clamp(0.875rem, 0.83rem + 0.223vw, 0.938rem);
+
+        /* LinkedIn icon color */
+        &-icon--linkedin {
+            color: $color-brand-primary;
+        }
+    }
+}
