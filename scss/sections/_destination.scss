@@ -1,0 +1,33 @@
+/* =======================================
+    DESTINATION SECTION
+
+    layout and styling for destination 
+    section
+========================================== */
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* Destination section layout */
+.destination {
+    @include section-base;
+    @include background-cover;
+
+    /* Background image for villa destination section */
+    &--villa {
+        background-image: url(../assets/images/destination-spain-villa.webp);
+    }
+
+    /* Background image for coast destination section */
+    &--coast {
+        background-image: url(../assets/images/destination-spain-coast.webp);
+    }
+
+    /* Inner container for destination content */
+    &__inner {
+        width: 100%;
+        display: grid;
+        gap: $spacing-2xl;
+        padding-block: $spacing-2xl;
+    }
+}

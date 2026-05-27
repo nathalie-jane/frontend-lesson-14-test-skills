@@ -9,7 +9,8 @@
 @use "../abstracts/mixins" as *;
 
 /* Base button styles */
-.intro__button {
+.intro__button,
+.destination-card__button {
     width: 9.5rem;
     min-height: 2.5rem;
     padding: 14px $spacing-xs $spacing-sm $spacing-xs;
