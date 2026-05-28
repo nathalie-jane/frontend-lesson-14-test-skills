@@ -56,11 +56,6 @@
         gap: $spacing-md;
         color: $color-text-secondary;
         font-size: clamp(0.875rem, 0.83rem + 0.223vw, 0.938rem);
-
-        /* LinkedIn icon color */
-        &-icon--linkedin {
-            color: $color-brand-primary;
-        }
     }
 }
 
@@ -143,11 +138,6 @@
                 transform: scale(1.3);
                 opacity: 0.85;
                 color: $color-brand-primary;
-            }
-
-            /* LinkedIn icon hover color */
-            &--linkedin:hover .site-footer__social-icon--linkedin {
-                color: $color-text-primary;
             }
         }
     }
