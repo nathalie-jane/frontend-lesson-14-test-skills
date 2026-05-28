@@ -15,11 +15,17 @@
     left: 50%;
     transform: translateX(-50%);
     display: grid;
-    justify-items: center;
-    gap: $spacing-xs;
+
+    /* Link wrapper for scroll prompt and icon */
+    &__link {
+        display: grid;
+        justify-items: center;
+        gap: $spacing-xs;
+        padding: $spacing-xs;
+    }
 
     /* Scroll prompt text */
-    &__text {
+    &__prompt {
         color: $color-text-primary;
         font-family: $font-primary;
         font-size: clamp(0.75rem, 0.705rem + 0.223vw, 0.813rem);
@@ -29,7 +35,7 @@
     }
 
     /* Animated arrow icon */
-    &__link-icon {
+    &__icon {
         animation: arrow-bounce 2s ease-in-out infinite;
         will-change: transform;
     }
@@ -52,7 +58,7 @@
 
 /* Responsive adjustments for scroll indicator (Tablet) */
 @include tablet {
-    .scroll-indicator__text {
+    .scroll-indicator__prompt {
         font-size: clamp(0.813rem, 0.701rem + 0.231vw, 0.875rem);
         line-height: 1.6;
         letter-spacing: 0.12rem;
@@ -64,7 +70,7 @@
     .scroll-indicator {
         bottom: 10rem;
 
-        &__text {
+        &__prompt {
             font-size: 0.875rem;
             line-height: 1.857;
             letter-spacing: 0.175rem;
